@@ -114,7 +114,10 @@ Publish interactive version with Power BI Service / Embedded.
 <img width="1322" height="741" alt="image" src="https://github.com/user-attachments/assets/de69973b-4d19-4afd-82fa-084fceda9c10" />
 <img width="1306" height="731" alt="image" src="https://github.com/user-attachments/assets/a12663f9-e735-48de-8aca-b8b78ec12011" />
 
+📜 License
 
+This project is licensed under the MIT License — see the LICENSE
+ file for details.
 
 
 
