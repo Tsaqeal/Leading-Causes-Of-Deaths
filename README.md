@@ -32,38 +32,47 @@ Excel (Dataset preprocessing)
 Here are the main custom measures used in the report:
 
 📌 Core Measures
-`Total Deaths =
-SUM('NCHS_-_Leading_Causes_of_Death_'[Deaths])`
+```
+Total Deaths =
+SUM('NCHS_-_Leading_Causes_of_Death_'[Deaths])
+```
 
 
 Calculates the total number of deaths.
 
-`(State) Average Age-Adjusted Death Rate =
-AVERAGE('NCHS_-_Leading_Causes_of_Death_'[Age-adjusted Death Rate])`
+```
+(State) Average Age-Adjusted Death Rate =
+AVERAGE('NCHS_-_Leading_Causes_of_Death_'[Age-adjusted Death Rate])
+```
 
 
 Computes the state-level average age-adjusted death rate.
 
-`(National) Average Age-Adjusted Death Rate =
+```
+(National) Average Age-Adjusted Death Rate =
 CALCULATE(
     AVERAGE('NCHS_-_Leading_Causes_of_Death_'[Age-adjusted Death Rate]),
     ALL('NCHS_-_Leading_Causes_of_Death_'[State])
-)`
+)
+```
 
 
 Computes the national average, ignoring state filters.
 
 📌 Comparative Measures
-`% Difference from National =
+```
+% Difference from National =
 DIVIDE(
     [(State) Average Age-Adjusted Death Rate] - [(National) Average Age-Adjusted Death Rate],
     [(National) Average Age-Adjusted Death Rate]
-)`
+)
+```
 
 
 Shows how much higher/lower a state’s death rate is compared to the national average.
 
-`State Rank by Year and Cause =
+```
+State Rank by Year and Cause =
 RANKX(
     FILTER(
         ALL('NCHS_-_Leading_Causes_of_Death_'[State]),
@@ -74,7 +83,8 @@ RANKX(
     ,
     DESC,
     DENSE
-)`
+)
+```
 
 
 Ranks states by death rate within a given year and cause.
